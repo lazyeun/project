@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Bootstrap project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+</head>
+<style>
+    *{position:relative; font-family:'Roboto', sans-serif;}
+    header{
+        position:absolute; 
+        top:20px; 
+        left:0; 
+        width:100%;  
+        z-index: 10;
+    }
+    .ham-btn{
+        width:50px;
+        height: 50px;
+        position:absolute;
+        right:0;
+        top:0;
+    }
+    .ham-btn span{
+        display: block;
+        position:absolute;
+        top:calc(50% - 1px);
+        left:10px;
+        width:30px;
+        height: 2px;
+        background:white;
+    }
+    .ham-btn span:nth-child(1){top:calc(50% - 8px);}
+    .ham-btn span:nth-child(2){top:calc(50% - 1px);}
+    .ham-btn span:nth-child(3){top:calc(50% + 6px);}
+    .section1{
+        width:100%;
+        height: 100vh;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        background-image:url(./h_de/oshine-arch-11.jpg);
+        background-size:cover;
+        background-position:center center;
+    }
+    .section1 .black{
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height: 100%;
+        background:rgba(0,0,0,.5);
+    }
+    .section1 h4{color:white;}
+    .section1 h1{color:white; font-weight: 900; font-size:70px;}
+    .section1 .button{
+        width:200px;
+        margin-top:20px;
+        text-align: center; 
+        line-height:50px; 
+        color:white; 
+        border:1px solid white;
+    }
+    @media (max-width:900px){
+        .section1{height: 500px;}
+        .section h1{font-size:40px;}
+    }
+    .section2{padding-top:70px; padding-bottom:70px;}
+    .section2 h2{
+        padding-bottom:10px;
+        line-height: 40px;
+        font-size:26px;
+    }
+    .section2 h5{color:#dddddd;}
+    .section2 p{font-size:15px;line-height: 25px;}
+    
+    @media (max-width:900px){
+        .section2 h2{padding-bottom:40px;font-size:20px;}
+        .section2 p{padding-top:20px;}
+    }
+    .section2-1{
+        width:100%;
+        height: 80vh;
+    }
+    .section2-1 .left-img{
+        height: 100vh;
+        background-image:url(h_de/download-17.jpg);
+        background-size:cover;
+        background-position:center center;
+    }
+    .section2-1 .right{
+        height: 100vh;
+        display:flex;
+        align-items:flex-start;
+        justify-content: center;
+        flex-direction:column;
+        background:#ededed;
+    }
+    .section2-1 .text_wrap{width:calc(100% - 100px); margin: 0 auto;}
+    .section2-1 h3{font-size:26px;}
+    .section2-1 p{font-size:15px; line-height: 25px;}
+    .section2-1 p:last-child{color:#666666; font-weight: 500;}
+    @media (min-width:900px){
+        .section2-1 .left-img{height: 80vh;}
+        .section2-1 .right{height: 80vh;}
+        .section2-1 h3{font-size:20px;}
+    }
+    @media (max-width:899px) and (min-width:499px){
+        .section2-1{height: 80vh;}
+        .section2-1 .left-img{height: 80vh;}
+        .section2-1 .right{height: 80vh;}
+        .section2-1 h3{font-size:20px;}
+    }
+    @media (max-width:500px){
+        .section2-1 .left-img{height: 50vh;}
+        .section2-1 .right{height: 100%;}
+        .section2-1 h3{font-size:20px;}
+    }
+    .section3{padding-top:70px; padding-bottom: 50px;}
+    .section3 .icon{
+        margin-top:30px;
+        font-size:50px;
+        color:#dddddd;
+    }
+    .section4 div{
+        margin-right:0 !important;
+        margin-left:0 !important;
+        padding-left:0 !important;
+        padding-right:0 !important;
+    }
+    .section4 img{width:100%;}
+    .section5{padding-top:50px; padding-bottom: 50px;}
+    .section5 img{width:100%;}
+    .section5 .news{padding-bottom:20px;}
+    .footer{padding-top:20px; padding-bottom:50px; background:black; color:white;}
+    .footer h5{padding-top:30px;padding-bottom:10px; font-size: 17px; font-weight: 600;}
+    .footer p{line-height: 20px;}
+    .footer .text{color:#999999;}
+    .footer p i{font-size:15px; padding-right:20px;}
+    .footer p span{color:#999999;}
+</style>
+
+<body>
+   <header>
+       <div class="container">
+           <div class="col-xs-6"><img src="h_de/oshine-min-logo-white.png"></div>
+           <div class="col-xs-6">
+               <div class="ham-btn">
+                   <span></span>
+                   <span></span>
+                   <span></span>
+               </div>
+           </div>
+       </div>
+   </header>
+    <section class="section section1">
+        <div class="black"></div>
+        <div class="container">
+            <h4>Award winning architects based out of London, UK</h4>
+            <h1>We Design Modern and Sustainable Houses</h1>
+            <div class="button">ABOUT US</div>
+        </div>
+    </section>
+    <section class="section section2">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                   <h2>Award winning architects based out of London, that works on residential, retail and hospitality projects.</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <p>Oshine comes with 12 unique and stunning demos. We have crafted each and every demo with extensive care and precision and the theme is power packed yet easy to use. Proin facilisis varius nunc. Curabitur eros risus, ultrices et dui ut, luctus accumsan nibh. Fusce convallis sapien placerat tellus suscipit vehicula.</p>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <p>Fusce pretium ante orci. Fusce eu eros condimentum, facilisis lorem ac, consequat quam. Duis eget elit ut est mattis rhoncus ut et felis. Cras pellentesque eros leo, in tincidunt turpis ultricies eu. Etiam vulputate augue a laoreet ementum. Fusce sed ex lorem.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <h5>Learn more about us</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section section2-1">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12 left-img"></div>
+                <div class="col-md-6 col-sm-6 col-xs-12 right">
+                    <div class="text_wrap">
+                        <h3>Our Philosophy</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et semper sapien. Integer pulvinar lectus nulla, sed placerat ante volutpat a. Donec ut neque massa. Nulla diam lectus, aliquam et accumsan feugiat, mattis a leo. Fusce pretium ante orci. Fusce eu eros condimentum, facilisis lorem ac, consequat quam. Duis eget elit ut est mattis rhoncus ut et felis. Cras pellentesque eros leo, in tincidunt turpis ultricies eu. Etiam vulputate augue a laoreetelementum. Fusce sed ex lorem.</p>
+                        <p>Learn more</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section section3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="icon"><i class="fas fa-bullhorn"></i></div>
+                    <h4>Listen</h4>
+                    <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line</p>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="icon"><i class="far fa-lightbulb"></i></div>
+                    <h4>Ideate</h4>
+                    <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line</p>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="icon"><i class="fas fa-pencil-ruler"></i></div>
+                    <h4>Design</h4>
+                    <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line</p>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="icon"><i class="fas fa-bullseye"></i></div>
+                    <h4>Deliver</h4>
+                    <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line</p>
+                </div>     
+            </div>
+        </div>
+    </section>
+    <section class="section section4">
+        <div class="container-fluid">
+           <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <img src="h_de/1-1000x625.jpg">
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <img src="h_de/2-1000x625.jpg">
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <img src="h_de/3-1000x625.jpg">
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <img src="h_de/4-1000x625.jpg">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section section5">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0">
+                    <h3 class="news">Latest News</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0">
+                    <img src="h_de/oshine-arch-17.jpg">
+                    <h3>Oshine – a Creative Multipurpose WordPress theme</h3>
+                    <p>October 10, 2014</p>
+                    <p>Detracto erroribus et mea. Malorum temporibus vix ex. Ius ad iudico labores dissentiunt.</p>
+                </div>
+                <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0">
+                    <img src="h_de/oshine-arch-27.jpg">
+                    <h3>If You Are Good At Something, Don’t Do It For Free</h3>
+                    <p>October 10, 2014</p>
+                    <p>Detracto erroribus et mea. Malorum temporibus vix ex. Ius ad iudico labores dissentiunt.</p>
+                </div>
+                <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0">
+                    <img src="h_de/oshine-v27-00.jpg">
+                    <h3>Woocommerce, WPML, Master Slider and much more</h3>
+                    <p>October 10, 2014</p>
+                    <p>Detracto erroribus et mea. Malorum temporibus vix ex. Ius ad iudico labores dissentiunt.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset- col-md-3 col-md-offset-0">
+                    <h5><img src="h_de/oshine-min-logo-white.png"></h5>
+                    <p class="text">Award winning architects based out of London, that works on residential, retail and hospitality projects.</p>
+                </div>
+                <div class="col-xs-12 col-xs-offset-0 col-sm-6 col-md-3 col-md-offset-0">
+                    <h5>Visit Us</h5>
+                    <p class="text">Level 6 Spaces Business Center, Downtown, London – 12345</p>
+                </div>
+                <div class="clearfix visible-sm-block"></div>
+                <div class="col-xs-12 col-xs-offset-0 col-sm-6 col-md-3 col-md-offset-0">
+                    <h5>Contact</h5>
+                    <p><span>E:</span> help@brandexponents.com</p>
+                    <p><span>P:</span> +1-123-456-7890</p>
+                </div>
+                <div class="col-xs-12 col-xs-offset-0 col-sm-6 col-md-3 col-md-offset-0">
+                    <h5>Connect</h5>
+                    <p>
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-pinterest-p"></i>
+                        <i class="fab fa-behance"></i>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

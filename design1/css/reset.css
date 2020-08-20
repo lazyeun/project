@@ -1,0 +1,9 @@
+*{
+   margin:0; 
+   padding:0; 
+   position:relative; 
+   font-family: 'AritaDotum', sans-serif; 
+   list-style:none;
+}
+img{display:block;}
+a{text-decoration: none;}

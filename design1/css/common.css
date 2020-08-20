@@ -1,0 +1,16 @@
+/*공통 css*/
+
+.section{
+    max-width:1200px;
+    margin:0 auto;
+}
+.section .title{
+    padding-top:20px;
+    padding-bottom:10px;
+}
+.section .title h2{
+    font-family: 'AritaBuri',sans-serif;
+    font-size: 36px;
+    text-align: center;
+    color:#231814;
+}

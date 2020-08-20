@@ -1,0 +1,12 @@
+ /*css초기화*/
+ * {
+     margin: 0;
+     padding: 0;
+     list-style: none;
+     font-family: 'Roboto', sans-serif;
+     position:relative;
+ }
+
+ img {
+     display: block;
+ }

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>당신의 피부와 일상에 이로움을 전하는 브랜드 | 한율 </title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <!-- font 웹폰트 css    -->
+    <link rel="stylesheet" href="./fonts/AritaBuri/fonts.css">
+    <link rel="stylesheet" href="./fonts/AritaDotum/fonts.css">
+    <!-- reset.css   -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <!-- 공통 적용 css   -->
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- main css link   -->
+    <link rel="stylesheet" href="./css/main.css">
+    <script>
+    //햄버거메뉴 클릭 시
+    /*
+     .ham-menu.click(function({
+        menu_wrap.css.display:block;
+        ham-menu span:nth-child(1).css.transform:translate , rotate;
+        ham-menu span:nth-child(2).css.opacity:0;
+        ham-menu span:nth-child(3).css.transform:translate , rotate;
+     }));
+    */
+    
+    $(document).ready(function(){
+         var clicks = true;
+        $("#ham-menu").click(function(){        
+            console.log(clicks);
+            if(clicks == true){
+                $(".menu_wrap").css({display:"block"});
+                $(".ham-menu span").css({transition:"0.5s"});
+                $(".ham-menu span:nth-child(1)").css({transform:" translate(0,10px) rotate(-45deg)"});
+                $(".ham-menu span:nth-child(2)").css({opacity:"0"});
+                $(".ham-menu span:nth-child(3)").css({transform:"translate(0,-10px) rotate(45deg)"});
+                clicks = false;
+            }else{
+                $(".menu_wrap").css({display:"none"});
+                $(".ham-menu span").css({transition:"0.5s"});
+                $(".ham-menu span:nth-child(1)").css({transform:" translate(0,0)"});
+                $(".ham-menu span:nth-child(2)").css({opacity:"1"});
+                $(".ham-menu span:nth-child(3)").css({transform:"translate(0,0)"});
+                clicks = true;
+            }        
+        });
+        console.log(clicks);       
+    });
+</script>
+</head>
+<body>
+    <header class="header">
+        <h1><img src="./img/logo.png" alt="한율로고"></h1>
+        <div class="ham-menu" id="ham-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+    <div class="main"></div>
+    <section class="section section1">
+        <div class="title">
+            <h2>BRAND STORY</h2>
+        </div>
+        <div class="right_img">
+            <img src="./img/brand1.jpg" alt="브랜드소개1">
+        </div>
+        <div class="left_txt">
+            <p class="brand_intro">한율의 뿌리는 어머니의 어머니에서부터 시작되었습니다</p>
+            <p>이땅의 자연에서, 대를 이어온 어머니의 지혜에서 균형잡힌 아름다움을 발견하다</p>
+        </div>
+        <div class="clear"></div>
+        <div class="bottom_img">
+            <img src="./img/brand2.jpg" alt="브랜드소개2">
+        </div>
+    </section>
+    <section class="section section2">
+        <div class="title">
+            <h2>한율 신제품</h2>
+        </div>
+        <div class="sub_title">
+            <h3>한율만의 특별한 자연재료로 만든 신제품을 만나보세요</h3>
+        </div>
+        <div class="new_grid">
+            <div class="new_item">
+                <img src="./img/new1.jpg" alt="한율 어린쑥 라인">
+                <div class="white"></div>
+                <p>한율 어린쑥 라인</p>
+            </div>
+            <div class="new_item">
+                <img src="./img/new2.jpg" alt="한율 글로우 파운데이션">
+                <div class="white"></div>
+                <p>한율 글로우 파운데이션</p>
+            </div>
+            <div class="new_item">
+                <img src="./img/new3.jpg" alt="한율 자연닮은 시트마스크">
+                <div class="white"></div>
+                <p>한율 자연닮은 시트마스크</p>
+            </div>
+            <div class="new_item">
+                <img src="./img/new4.jpg" alt="한율 백화고">
+                <div class="white"></div>
+                <p>한율 백화고</p>
+            </div>
+            <div class="new_item">
+                <img src="./img/new5.jpg" alt="한율 극진">
+                <div class="white"></div>
+                <p>한율 극진</p>
+            </div>
+            <div class="new_item">
+                <img src="./img/new6.jpg" alt="한율 빨간쌀 라인">
+                <div class="white"></div>
+                <p>한율 빨간쌀 라인</p>
+            </div>
+        </div>
+    </section>
+    <section class="section section3">
+        <div class="title">
+            <h2>라인별 제품</h2>
+        </div>
+        <div class="line_grid">
+            <div class="line_item">
+                <p>다홍매실</p>
+                <p>(피부정화&amp;pH균형)</p>
+            </div>
+            <div class="line_item">
+                <p>세살쑥</p>
+                <p>(깊은 진정&amp;항산화)</p>
+            </div>
+            <div class="line_item">
+                <p>어린쑥</p>
+                <p>(수분&amp;진정)</p>
+            </div>
+            <div class="line_item">
+                <p>갈색솔잎</p>
+                <p>(안티에이징)</p>
+            </div>
+            <div class="line_item">
+                <p>빨간쌀</p>
+                <p>(진한 보습&amp;방어력)</p>
+            </div>
+            <div class="line_item">
+                <p>서리태</p>
+                <p>(보습&amp;보호)</p>
+            </div>
+            <div class="line_item">
+                <p>백화고</p>
+                <p>(주름&amp;탄력)</p>
+            </div>
+            <div class="line_item">
+                <p>흰감국</p>
+                <p>(투명&amp;맑음)</p>
+            </div>
+            <div class="line_item">
+                <p>자초</p>
+                <p>(진정&amp;보습)</p>
+            </div>
+            <div class="line_item">
+                <p>극진</p>
+                <p>(프리미엄 안티에이징)</p>
+            </div>
+            <div class="line_item">
+                <p>채움</p>
+                <p>(프리미엄 안티에이징)</p>
+            </div>
+            <div class="line_item">
+                <p>송담</p>
+                <p>(안티에이징)</p>
+            </div>
+            <div class="line_item">
+                <p>달빛유자</p>
+                <p>(피부 피로해소&amp;생기충전)</p>
+            </div>
+            <div class="line_item">
+                <p>산들박하</p>
+                <p>(트러블 진정&amp;피지케어)</p>
+            </div>
+            <div class="line_item">
+                <p>순수</p>
+                <p>(저자극)</p>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="item icon">
+                <i class="fas fa-angle-left"></i>
+            </div>
+            <div class="item">
+                <img src="img/line1.jpg" alt="다홍매실">
+            </div>
+            <div class="item prod_detail">
+                <img src="img/line1_prod.jpg" alt="한율 다홍매실 비움 초">
+                <div class="overlay"></div>
+                <div class="text">
+                    <h4>한율 다홍매실 비움 초</h4>
+                    <span></span>
+                    <p>5년 자연발효한 홍매실 발효 초가 피부를 정화하고 pH 밸런스를 잡아주어 투명하고 매끄러운 피부로 가꾸어주는 약산성 뷰티초 에센스
+                    </p>
+                </div>
+            </div>
+            <div class="item item_null"></div>
+            <div class="item icon">
+                <i class="fas fa-angle-right"></i>
+            </div>
+        </div>
+        <div class="res_prod">
+            <div class="prod_title title1">
+                <img class="title_img" src="./img/pinkplum.jpg" alt="다홍매실">
+                <img class="title_png" src="./img/function_tl_pinkplum-2.png" alt="다홍매실">
+            </div>
+            <div class="prod prod_list">
+                <div class="prod_item">
+                    <img src="img/line1_prod.jpg" alt="한율 다홍매실 비움 초">
+                    <div class="black"></div>
+                    <h4>한율 다홍매실 비움 초</h4>
+                </div>
+            </div>
+            <div class="prod_title title2">
+                <img class="title_img" src="./img/artemisia.jpg" alt="세살쑥">
+                <img class="title_png" src="./img/function_tl_artemisia.png" alt="세살쑥">
+            </div>
+            <div class="prod prod_list">
+                <div class="prod_item">
+                    <img src="img/line2_prod.jpg" alt="한율 세살쑥 진정 에센스">
+                    <div class="black"></div>
+                    <h4>한율 세살쑥 진정 에센스</h4>
+                </div>
+            </div>
+            <div class="prod_title title3">
+                <img class="title_img" src="./img/pureartemisia.jpg" alt="어린쑥">
+                <img class="title_png" src="./img/function_tl_pureartemisia-1.png" alt="어린쑥">
+            </div>
+            <div class="prod prod_list">
+                <div class="prod_item">
+                    <img src="img/line3_prod1.jpg" alt="한율 자연을 닮은 핸드크림-어린쑥">
+                    <div class="black"></div>
+                    <h4>한율 자연을 닮은 핸드크림-어린쑥</h4>
+                </div>
+                <div class="prod_item">
+                    <img src="img/line3_prod2.jpg" alt="한율 자연을 닮은 립밤-어린쑥">
+                    <div class="black"></div>
+                    <h4>한율 자연을 닮은 립밤-어린쑥</h4>
+                </div>
+                <div class="prod_item">
+                    <img src="img/line3_prod3.jpg" alt="한율 어린쑥 진정맑음 클렌징 오일">
+                    <div class="black"></div>
+                    <h4>한율 어린쑥 진정맑음 클렌징 오일</h4>
+                </div>
+                <div class="prod_item">
+                    <img src="img/line3_prod4.jpg" alt="한율 어린쑥 진정맑은 클렌징 폼">
+                    <div class="black"></div>
+                    <h4>한율 어린쑥 진정맑은 클렌징 폼</h4>
+                </div>
+                <div class="prod_item">
+                    <img src="img/line3_prod5.jpg" alt="한율 어린쑥 여성청결제">
+                    <div class="black"></div>
+                    <h4>한율 어린쑥 여성청결제</h4>
+                </div>
+                <div class="prod_item">
+                    <img src="img/line3_prod6.jpg" alt="한율 어린쑥 클레이 투 폼">
+                    <div class="black"></div>
+                    <h4>한율 어린쑥 클레이 투 폼</h4>
+                </div>
+                <div class="prod_item">
+                    <img src="img/line3_prod7.jpg" alt="한율 어린쑥 클렌징 마사지 크림">
+                    <div class="black"></div>
+                    <h4>한율 어린쑥 클렌징 마사지 크림</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section section4">
+        <div class="title">
+            <h2>EVENT</h2>
+        </div>
+        <div class="evt">
+            <div class="evt_item first">
+                <img src="./img/event1.jpg" alt="자연 닮은 시트마스크 이벤트">
+                <div class="evt_text">
+                    <p>자연 닮은 시트마스크 체험단 모집</p>
+                    <p>2020.08.14 - 2020.08.21</p>
+                </div>
+            </div>
+            <div class="evt_item">
+                <img src="img/event2.jpg" alt="산들 박하 트러블 토너 이벤트">
+                <div class="evt_text">
+                    <p>산들 박하 트러블 토너 증정 이벤트</p>
+                    <p>2020.08.14 - 2020.08.21</p>
+                </div>
+            </div>
+        </div>
+        <div class="res_evt">
+            <div class="res_item">
+                <img src="./img/event1.jpg" alt="자연 닮은 시트마스크 이벤트">
+                <div class="evt_text">
+                    <p>자연 닮은 시트마스크 체험단 모집</p>
+                    <p>2020.08.14 - 2020.08.21</p>
+                </div>
+            </div>
+            <div class="res_item">
+                <img src="img/event2.jpg" alt="산들 박하 트러블 토너 이벤트">
+                <div class="evt_text">
+                    <p>산들 박하 트러블 토너 증정 이벤트</p>
+                    <p>2020.08.14 - 2020.08.21</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="buy_wrap">
+            <div class="buy_info">
+                <span>구매하기</span>
+                <span>지금 AP몰을 방문하셔서 한율 제품과 풍성한 혜택을 드리는 이벤트를 확인해보세요.</span>
+            </div>
+        </div>
+        <div class="mall_wrap">
+            <div class="mall_info">
+                <div class="mall_item">
+                    <img src="./img/apmall.png" alt="apmall">
+                    <p>지금은 한율과 함께 아름다워지는 시간입니다</p>
+                    <button>한율제품 구매하기</button>
+                </div>
+                <div class="mall_item">
+                    <img src="./img/beautypoint.png" alt="apmall">
+                    <p>쌓을수록 아름다워지는 아모레퍼시픽 통합 멤버십</p>
+                    <button>뷰티포인트 소개</button>
+                </div>
+            </div>
+        </div>
+        <div class="foot_wrap">
+            <div class="foot_info">
+                <ul>
+                    <li>영상정보처리기기 운영 방침</li>
+                    <li>서비스 이용 약관</li>
+                    <li>개인정보 처리방침</li>
+                    <li>사이트맵</li>
+                </ul>
+                <p>고객서비스센터(수신자요금부담) 080-023-5454 (월~금 AM 9:00 ~ PM 6:00)</p>
+            </div>
+        </div>
+        <div class="res_footer">
+            <ul class="res_links">
+                <li>구매하기</li>
+                <li>뷰티포인트</li>
+            </ul>
+            <ul class="res_info">
+                <li>영상정보처리기기 운영 방침</li>
+                <li>서비스 이용 약관</li>
+                <li>개인정보 처리방침</li>
+                <li>사이트맵</li>
+            </ul>
+            <p>고객서비스센터(수신자요금부담) 080-023-5454 (월~금 AM 9:00 ~ PM 6:00)</p>
+        </div>
+    </footer>
+    <div class="menu_wrap">
+        <div class="menu">
+            <ul class="list">
+                <li>BRAND STORY</li>
+                <li>한율 신제품</li>
+                <li>라인별 제품</li>
+                <li>EVENT</li>
+            </ul>
+            <span class="line"></span>
+            <div class="sns_group">
+                <img src="./img/facebook.png" alt="한율 페이스북">
+                <img src="./img/instgram.png" alt="한율 인스타그램">
+                <img src="./img/youtube.png" alt="한율 유튜브">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
